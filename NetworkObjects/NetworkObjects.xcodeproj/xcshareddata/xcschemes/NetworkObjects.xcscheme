@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "6EAD584519C3B58300DC080A"
                BuildableName = "NetworkObjects.framework"
                BlueprintName = "NetworkObjects"
+               ReferencedContainer = "container:NetworkObjects.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6EAD585019C3B58300DC080A"
+               BuildableName = "NetworkObjectsTests.xctest"
+               BlueprintName = "NetworkObjectsTests"
                ReferencedContainer = "container:NetworkObjects.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
