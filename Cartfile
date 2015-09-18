@@ -1,2 +1,5 @@
-github "ColemanCDA/RoutingHTTPServer" "develop"
-github "ColemanCDA/ExSwift" "develop"
+github "PureSwift/json-c" "master"
+github "PureSwift/libb64" "Xcode"
+github "PureSwift/SwiftFoundation" "develop"
+github "PureSwift/CoreModel" "develop"
+github "ColemanCDA/SwiftWebSocket" "master"

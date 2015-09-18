@@ -2,22 +2,12 @@
 //  NetworkObjectsTests.swift
 //  NetworkObjectsTests
 //
-//  Created by Alsey Coleman Miller on 9/12/14.
-//  Copyright (c) 2014 ColemanCDA. All rights reserved.
+//  Created by Alsey Coleman Miller on 9/1/15.
+//  Copyright © 2015 ColemanCDA. All rights reserved.
 //
 
-#if os(iOS)
-import UIKit
-#endif
-#if os(OSX)
-import AppKit
-#endif
-
-import Foundation
 import XCTest
-import CoreData
-import NetworkObjects
-import ExSwift
+@testable import NetworkObjects
 
 class NetworkObjectsTests: XCTestCase {
     
@@ -31,45 +21,16 @@ class NetworkObjectsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testFrameworkVersion() {
-        
-        let frameworkBundle = NSBundle(identifier: "com.colemancda.NetworkObjects")!
-        
-        let shortFrameworkVersion = frameworkBundle.infoDictionary!["CFBundleShortVersionString"] as! String
-        
-        let frameworkVersion = frameworkBundle.infoDictionary![kCFBundleVersionKey as String]! as! String
-        
-        if frameworkVersion == "TRAVISCI" {
-            
-            println("Skipping framework version assertion, running from Travis CI")
-            
-            return
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measureBlock {
+            // Put the code you want to measure the time of here.
         }
-        
-        println("Testing NetworkObjects \(shortFrameworkVersion) Build \(frameworkVersion)")
-        
-        XCTAssert(shortFrameworkVersion != "1", "Short framework version (\(shortFrameworkVersion)) should not equal 1")
-        
-        XCTAssert(frameworkVersion.toUInt()! > 1, "Framework version (\(frameworkVersion)) should be greater than 1")
     }
     
-    func testStoreInit() {
-        // This is an example of a functional test case.
-        
-        let store = Store(managedObjectModel: NSManagedObjectModel(), managedObjectContextConcurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType, serverURL: NSURL(string: "http://localhost:8080")!, prettyPrintJSON: true, resourceIDAttributeName: "id", dateCachedAttributeName: "dateCached", searchPath: "search")
-        
-        XCTAssert(store.dynamicType === Store.self, "Store should have been initialized")
-    }
-    
-    func testServerInit() {
-        // This is an example of a functional test case.
-        
-        
-        
-        XCTAssert(true, "Pass")
-    }
 }
-
-// MARK: - Constants
-
-let ServerTestingPort: UInt = 8089
